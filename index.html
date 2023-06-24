@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>LinguaCheck</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/raj457036/attriCSS@master/themes/midnight-green.css"/>
+  </head>
+	<body>
+		<h1>LinguaCheck</h1>
+		<a href="/create.html">Add a new language</a>
+		<h2>Load a language</h2>
+		<select id="language-load"></select>
+		<h2>Check your text</h2>
+		<p style="border: 1px solid cyan;"contenteditable>This is some text. Click here to edit it.</p>
+		<button id="check-it">Check it!</button>
+		<details>
+						<summary>Settings</summary>
+						<input type="checkbox" id="markov-enable" checked/>
+						<label for="markov-enable">Enable Markov Chain checking</label>
+		</details>
+	</body>
+</html>
