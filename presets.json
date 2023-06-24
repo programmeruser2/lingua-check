@@ -2,6 +2,8 @@
 				{
 								"name": "English",
 								"tokenizer": "space-split",
-								"markov": "english-markov.json"
+								"rules": "english.rules",
+								"markov": "english-markov.json",
+								"local": false
 				}
 ]
