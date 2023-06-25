@@ -30,6 +30,7 @@
 		<h2>Step 3: Add grammar rules</h2>
 		<p>These are manual grammar rules that can complement the language models. Use JavaScript for each of them. They should all return a list of invalid or questionable locations. Examples can be found on the Github repository.</p>
 		<p>The rules should be implemented as a function that returns a list of functions which are the individual rules.</p>
+		<p>The individual functions should return a list of objects, and each object should be in the form {indexStart: [token start index], indexEnd: [token end index], level: [level], suggestions: [list of suggestions as strings]}, where level 0 means OK, level 1 means questionable, and level 2 means probably wrong</p>
 		<textarea id="grammar-code" placeholder="Manual Grammar Rules">return [];</textarea>
 		<h2>Step 4: Add Corpus</h2>
 		<p>This will be used for training the language model.</p>

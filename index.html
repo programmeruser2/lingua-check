@@ -17,10 +17,17 @@
 		<h2>Check your text</h2>
 		<p id="text" style="border: 1px solid cyan;"contenteditable>This is some text. Click here to edit it.</p>
 		<button id="check-it">Check it!</button>
+		<div id="errors"></div>
 		<details>
 						<summary>Settings</summary>
 						<input type="checkbox" id="markov-enable" checked/>
-						<label for="markov-enable">Enable Markov Chain checking</label>
+						<label for="markov-enable">Enable Markov Chain checking</label> <br/>
+						<input type="checkbox" id="markov-strict"/>
+						<label for="markov-strict">Markov Strict Mode (warn about unknown transitions)</label> <br/>
+						<label for="markov-warn-thres">Markov Warning Threshold: </label>
+						<input type="number" id="markov-warn-thres" value="0.4" step="any"/> <br/>
+						<label for="markov-threshold">Markov Anamoly Threshold: </label>
+						<input type="number" id="markov-threshold" value="0.6" step="any"/>
 		</details>
 	</body>
 </html>

@@ -1,3 +1,7 @@
 body{text-align:center;}
 select {color:darkblue;}
 input { color: darkcyan; }
+.error-box {
+	border-color: black;
+	border-radius: 1px;
+}

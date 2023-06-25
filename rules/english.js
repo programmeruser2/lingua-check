@@ -1,0 +1,1 @@
+return [(tokens) => {let errs=[];for (let i = 1; i < tokens.length; ++i) { if (tokens[i-1] == '.' && tokens[i][0] != tokens[i][0].toUpperCase()) { errs.push({indexStart:i,indexEnd:i,level:2,suggestions:['Make the first letter of '+tokens[i]+' uppercase']}); } }; return errs; }];
