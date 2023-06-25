@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>LinguaCheck</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/raj457036/attriCSS@master/themes/midnight-green.css"/>
+		<link rel="stylesheet" href="style.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/localforage@1.10.0/dist/localforage.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="create.js" defer></script>
+  </head>
+	<body>
+		<h1>Create a language</h1>
+
+		<h2>Step 1: Enter details</h2>
+		<input id="language-name" type="text" placeholder="Language Name"/>
+
+		<h2>Step 2: Add tokenizer</h2>
+		<p>You can view the list of presets at <a href="https://github.com/programmeruser2/lingua-check/tree/main/tokenizers">Github</a>.</p>
+		<p>You can also make a custom tokenizer with JavaScript.</p>
+		<p>It should take an argument of "text" and return the tokens</p>
+		<p>Note: if using a preset tokenizer, don't enter the .js extension</p>
+		<select id="tokenizer-select">
+			<option value="preset">Preset</option>
+			<option value="custom">Custom</option>
+		</select>
+		<input type="text" placeholder="Preset Name" id="preset-name"/>
+		<textarea style="display: none;" id="custom-tokenizer-code" placeholder="Custom Tokenizer Code (ignore if not using)"></textarea>
+		
+		<h2>Step 3: Add grammar rules</h2>
+		<p>These are manual grammar rules that can complement the language models. Use JavaScript for each of them. They should all return a list of invalid or questionable locations. Examples can be found on the Github repository.</p>
+		<p>The rules should be implemented as a function that returns a list of functions which are the individual rules.</p>
+		<textarea id="grammar-code" placeholder="Manual Grammar Rules">return [];</textarea>
+		<h2>Step 4: Add Corpus</h2>
+		<p>This will be used for training the language model.</p>
+		<label for="files">Select corpus files: (they will be appended together)</label> <br/>
+		<input type="file" id="files" multiple></input>
+
+		<h2>Step 5: Train language model</h2>
+		<button id="train">Train the model</button>
+		<p id="training-message"></p>
+		<h2>Step 6: Save the language</h2>
+		<button id="save">Save!</button>
+	</body>
+</html>

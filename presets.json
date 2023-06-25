@@ -2,8 +2,10 @@
 				{
 								"name": "English",
 								"tokenizer": "space-split",
-								"rules": "english.rules",
-								"markov": "english-markov.json",
-								"local": false
+								"rules": "english",
+								"markov": "english.json",
+								"localTokenizer": false,
+								"localRules": false,
+								"localMarkov": false
 				}
 ]
